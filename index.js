@@ -4,7 +4,7 @@ const uuid = require("uuid");
 const clipboardy = require("clipboardy");
 
 var data = [];
-const amount = 5;
+const amount = 100;
 
 var i = 0;
 while (i < amount) {
@@ -23,6 +23,7 @@ data = data.map((d) => {
   const email = `${username}@gmail.com`;
   const phone = "03" + (Math.random() * (99999999 - 10000000) + 100000000);
   const id = uuid.v4();
+  const status = !!Math.floor(Math.random() * 2) ? "lock" : "active";
 
   return {
     firstName,
@@ -31,6 +32,7 @@ data = data.map((d) => {
     email,
     phone,
     id,
+    status,
   };
 });
 
