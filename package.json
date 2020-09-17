@@ -4,15 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "rimraf uploads/* && node index.js",
+    "server": "node uploadServer.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "clipboardy": "^2.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "jdenticon": "^3.0.1",
     "lodash": "^4.17.20",
     "node-random-name": "^1.0.1",
+    "path": "^0.12.7",
     "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
   }
 }
